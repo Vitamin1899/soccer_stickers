@@ -1,0 +1,54 @@
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   text-align: center;
+   color: #fff;
+}
+
+.container {
+   min-height: 100%;
+   width: 100%;
+   position: relative;
+
+}
+
+header {
+   height: 50px;
+   text-align: center;
+   background-color: #333333;
+   color: #FFFFFF;
+}
+
+.body {
+   height: 100%;
+}
+
+.footer {
+   height: 25px;
+   text-align: center;
+   color: #FFFFFF;
+   background-color: #292929;
+   width: 1330px;
+   position: absolute;
+   bottom: 0;
+}
+
+h1 {
+  text-align: center;
+}
+.center {
+   height: 580px;
+   background-image:url(money.png);
+}
+
+table, th, td {
+  width: 700px;
+  height: 20px;
+  margin: auto;
+  text-align:center;
+  background-color: #ffffff;
+  border: 1px solid green;
+}
