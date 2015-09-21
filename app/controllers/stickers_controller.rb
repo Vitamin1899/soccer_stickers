@@ -1,5 +1,5 @@
 class StickersController < ApplicationController
-  before_filter :authenticate_user!, except => [:show, :index]
+  #before_filter :authenticate_user!, except => [:show, :index]
   before_action :set_sticker, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
