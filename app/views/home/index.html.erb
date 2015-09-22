@@ -1,1 +1,7 @@
-<h1 class="center">Soccer Stickers</h1>
+<h1 class="center" >Soccer Stickers</h1>
+
+<div>
+  <% @stickers.each do |sticker| %>
+    <%= image_tag sticker.image_url if sticker.image? %>
+  <% end %>
+</div>
