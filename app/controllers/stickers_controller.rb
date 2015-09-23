@@ -1,4 +1,5 @@
 class StickersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :index]
   #before_filter :authenticate_user!, except => [:show, :index]
   before_action :set_sticker, only: [:show, :edit, :update, :destroy]
 
@@ -43,6 +44,6 @@ class StickersController < ApplicationController
     end
 
     def sticker_params
-      params.require(:sticker).permit(:image)
+      params.require(:sticker).permit(:image, :user_id)
     end
 end

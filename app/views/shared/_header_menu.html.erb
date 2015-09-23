@@ -4,7 +4,11 @@
       <div><%= link_to "Home", home_index_path %></div>
     </div>
     <div class="navbar-brand">
-      <div><%= link_to "New Sticker", new_sticker_path %></div>
+      <% if user_signed_in? %>
+        <div><%= link_to "New Sticker", new_sticker_path %></div>
+      <% else %>
+        <div>Sign up and add yours sticker</div>
+      <% end %>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -16,5 +20,5 @@
         <li><%= link_to "Sign up", new_user_registration_path %></li>
       <% end %>
       </ul>
-  </div>
+    </div>
   </div>
