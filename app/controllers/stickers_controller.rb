@@ -1,6 +1,5 @@
 class StickersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
-  #before_filter :authenticate_user!, except => [:show, :index]
   before_action :set_sticker, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -23,7 +22,7 @@ class StickersController < ApplicationController
   end
 
   def create
-    @sticker = Sticker.new(sticker_params)
+    @sticker = Sticker.new(sticker_params.merge({ user_id: current_user.id }))
     @sticker.save
     respond_with(@sticker)
   end
@@ -34,7 +33,7 @@ class StickersController < ApplicationController
   end
 
   def destroy
-    @sticker.destroy
+    @sticker.destroy if @sticker.user == current_user
     respond_with(@sticker)
   end
 

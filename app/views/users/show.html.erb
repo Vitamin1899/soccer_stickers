@@ -4,11 +4,13 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-<div>
-  <% @user.stickers.each do |sticker| %>
-    <%= image_tag sticker.image_url if sticker.image? %>
-  <% end %>
-</div>
-
+<p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<p>
+<div><strong>My stickers:</strong></div>
+  <% @user.stickers.each do |sticker| %>
+    <%= image_tag sticker.image_url(:thumb) if sticker.image? %>
+    <%= link_to 'Destroy', sticker, method: :delete, data: { confirm: 'Are you sure?' }%>
+  <% end %>
+</div>

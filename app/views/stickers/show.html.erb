@@ -2,7 +2,7 @@
 
 <div><strong>Sticker:</strong></div>
 <div>
-  <%= image_tag @sticker.image_url if @sticker.image? %>
+  <%= image_tag @sticker.image_url(:thumb) if @sticker.image? %>
 </div>
 
 <%= link_to 'Edit', edit_sticker_path(@sticker) %> |
