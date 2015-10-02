@@ -5,3 +5,4 @@
     <%= image_tag sticker.image_url(:thumb) if sticker.image? %>
   <% end %>
 </div>
+<%= will_paginate @stickers %>

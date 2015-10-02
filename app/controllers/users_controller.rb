@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @stickers = User.find(params[:id]).stickers.paginate(:page => params[:page], :per_page => 15)
     respond_with(@user)
   end
 

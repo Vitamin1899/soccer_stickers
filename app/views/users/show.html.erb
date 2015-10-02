@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h3>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-<p>
+</h3>
+<div>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
-<p>
-<div><strong>My stickers:</strong></div>
-  <% @user.stickers.each do |sticker| %>
+</div>
+<h4><strong>My stickers:</strong></h4>
+  <% @stickers.each do |sticker| %>
     <%= image_tag sticker.image_url(:thumb) if sticker.image? %>
     <%= link_to 'Destroy', sticker, method: :delete, data: { confirm: 'Are you sure?' }%>
   <% end %>
-</div>
+  </br>
+<%= will_paginate @stickers %>

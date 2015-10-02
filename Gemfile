@@ -60,6 +60,8 @@ end
 # Device authentication
 gem 'devise'
 
+gem 'will_paginate', '~> 3.0.6'
+
 # Bootstrap integration
 gem 'bootstrap-sass', '~> 3.3.3'
 

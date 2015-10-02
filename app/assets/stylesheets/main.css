@@ -10,6 +10,10 @@ body {
    background-color: #ADFF2F;
 }
 
+.sign-up {
+   color: #FF0000;
+}
+
 .container {
    min-height: 100%;
    position: relative;
@@ -24,7 +28,8 @@ header {
 }
 
 .body {
-   padding-bottom: 100px;
+   padding-bottom: absolute;
+   text-align: center;
 }
 
 .footer {
